@@ -8,3 +8,14 @@
 # Lizard eats Paper
 # Paper disproves Spock
 # Spock vaporizes Rock
+
+
+from  import
+from  import
+import random
+
+win = 1
+win += 1
+
+loss = 0
+loss += 1
