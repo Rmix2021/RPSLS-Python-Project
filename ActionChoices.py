@@ -1,3 +1,4 @@
 class ActionChoice:
-    def action_choice(self, name):
+
+    def __init__(self, name):
         self.name = name

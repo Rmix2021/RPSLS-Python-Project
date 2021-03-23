@@ -1,7 +1,8 @@
-from action_choice import Action_Choice
+from ActionChoices import ActionChoice
+
 
 class Player:
-    def __init__(self,name,action_choice):
-        self.player = name
-        self.action_choice = [rock, scissors, paper, lizard, spock]
-print(self.action[1])
+    def __init__(self, name):
+        self.name = name
+        self.player_choice = [ActionChoice("rock"), ActionChoice("paper"), ActionChoice("scissors"),
+                            ActionChoice("lizard"), ActionChoice("spock")]
