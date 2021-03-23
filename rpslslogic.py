@@ -3,10 +3,6 @@ from humanplayer import HumanPlayer
 
 
 
-class Game:
-    def __init__(self):
-        self.HumanPlayer = HumanPlayer(self)
-        self.ComputerPlayer = ComputerPlayer
 
     def game_rules():
         print("Welcome to RPSLS, a game of choice")
@@ -14,45 +10,124 @@ class Game:
                 Rock crushes Lizard, Lizard poisons Spock, Spock smashes Scissors, Scissors decapitates Lizard,
                 Lizard eats Paper, Paper disproves Spock, Spock vaporizes Rock""")
 
+
+class Game:
+    def __init__(self):
+        self.HumanPlayer = HumanPlayer(self)
+        self.ComputerPlayer = ComputerPlayer
+
     def ask_user_for_input(self):
         user_input = input()
         input("Do you wish to play another Human or the Computer? press '8' for human or '9' for computer")
         if user_input == 8:
-            self.HumanPlayer = HumanPlayer(1)
-            self.HumanPlayer = HumanPlayer(2)
+            self.HumanPlayer = player1
+            self.HumanPlayer[2] = player2
 
         if user_input == 9:
-            self.HumanPlayer = HumanPlayer(1)
-            self.ComputerPlayer = ComputerPlayer
-
-x = HumanPlayer.wins
-y = ComputerPlayer.wins
-
-while x < 3 and y < 3
-
-    def game_loop(self):
-        if HumanPlayer.input == 0
-            and ComputerPlayer.input == 2
-            x += 1
-            print("Rock crushes Scissors! You win!")
-        if HumanPlayer.input == 0
-            and ComputerPlayer.input == 3
-            x +=1
-            print("Rock squashes Lizard! You win!")
-        if HumanPlayer.input == 0
-            and ComputerPlayer.input == 1
-            y += 1
-            print("Paper covers Rock! You Lose!")
-        if HumanPlayer.input == 0
-            and ComputerPlayer.input == 3
-            x += 1
-            print("Rock squashes Lizard! You win!")
+            self.HumanPlayer = player1
+            self.ComputerPlayer = player2
 
 
 
-    # def ask_to_play_again(self):
-    #
-    #     play_again = input("Play again? 6 = yes, 7 = No")
-    #     if play_again.lower() != "y":
-    #         break
-    #
+    def win_tracker(self):
+        player1_wins = x
+        player2_wins = y
+        x = 0
+        y = 0
+
+
+        def game_loop():
+        while x < 3 and y < 3:
+            if player1 == 0:
+                and player2 == 2
+                x += 1
+                print("Rock crushes Scissors, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 0
+                and ComputerPlayer.input == 3
+                x +=1
+                print("Rock squashes Lizard, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 0:
+                and ComputerPlayer.input == 1
+                y += 1
+                print("Paper covers Rock, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 0:
+                and ComputerPlayer.input == 3
+                y += 1
+                print("Rock squashes Lizard, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 1:
+                and ComputerPlayer.input == 0
+                x += 1
+                print("Paper covers Rock, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 1:
+                and ComputerPlayer.input == 4
+                x += 1
+                print("Paper disproves Spock, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 1:
+                and ComputerPlayer.input == 2
+                y += 1
+                print("Scissors cut Paper, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 1:
+                and ComputerPlayer.input == 3
+                y += 1
+                print("Lizard eats Paper, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 2:
+                and ComputerPlayer.input == 1
+                x += 1
+                print("Scissors cuts Paper, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 2:
+                and ComputerPlayer.input ==3
+                x += 1
+                print("Scissors decapitates Liazrd, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 2:
+                and ComputerPlayer.input == 0
+                y += 1
+                print("Rock crushes Scissors, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+             if HumanPlayer.input == 2:
+                and ComputerPlayer.input == 4
+                y += 1
+                print("Spock smashes Scissors, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 3:
+                and ComputerPlayer.input == 1
+                x += 1
+                print("Lizard eats Paper, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 3:
+                and ComputerPlayer.input == 4
+                x += 1
+                print("Lizard poison Spock, you win!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 3:
+                and ComputerPlayer.input == 2
+                y += 1
+                print("Scissors decapitates Lizard, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+            if HumanPlayer.input == 3:
+                and ComputerPlayer.input == 0
+                y += 1
+                print("Rock squashes Lizard, you lose!")
+                print("Player1 = " + player1_wins + "Player2 = " + player2_wins)
+
+                if player1_wins == 3:
+                    print("Player 1 Wins")
+                if player2_wins == 3:
+                    print("Player 2 Wins")
+
+
+    user_input = input("Play again? 6 = yes, 7 = No")
+    if user_input == 6:
+        # gamefunction()
+    else:
+        break
+
