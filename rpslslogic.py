@@ -30,11 +30,8 @@ class Game:
         self.user_action()
 
     def user_action(self):
-        self.player1 = self.player1.selection
-        self.player2 = self. player2.selection
-
-        action = HumanPlayer.human_selection(player_choice[selection])
-        action2 = ComputerPlayer.computer_selection()
+        action = self.player1.selection
+        action2 = self.player2.selection
 
         x = 0
         y = 0
@@ -133,5 +130,3 @@ class Game:
                 break
 
 
-game_rules()
-Game().game_loop()
