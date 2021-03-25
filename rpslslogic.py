@@ -14,6 +14,11 @@ class Game:
         self.player1 = HumanPlayer(self)
         self.player2 = None
 
+    def game_run(self):
+        game_rules()
+        self.game_loop()
+        self.user_action()
+
     def game_loop(self):
         user_input = input("Do you wish to play another Human or the Computer? press '8' for human or '9' for computer")
         if user_input == 8:
@@ -23,11 +28,6 @@ class Game:
         if user_input == 9:
             self.player1 = HumanPlayer
             self.player2 = ComputerPlayer
-
-    def game_run(self):
-        game_rules()
-        self.game_loop()
-        self.user_action()
 
     def user_action(self):
         action = self.player1.selection
@@ -129,4 +129,6 @@ class Game:
             else:
                 break
 
+
+Game().game_run()
 
